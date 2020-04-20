@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/catalogItem"
+
+        android:icon="@drawable/ic_menu_book_24px"
+        android:title="Каталог"
+
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/cartItem"
+        android:icon="@drawable/ic_shopping_cart_24px"
+        android:title="Карзина"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/ordersItem"
+        android:icon="@drawable/ic_assignment_24px"
+        android:title="Заказы"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/profilItem"
+        android:icon="@drawable/ic_person_outline_24px"
+        android:title="Профиль"
+        app:showAsAction="always|withText" />
+</menu>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.e.bookstory">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /><!--хз зачем эта строка-->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" /><!--хз зачем эта строка-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.WriteReviewActivity"></activity>
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.LoginActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                                                                            //на случай когда появится авторизация
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".activities.ReviewActivity"
+            android:label="@string/activity_review_title" />
+        <activity
+            android:name=".activities.BookActivity"
+            android:label="@string/activity_book_title" />
+        <activity
+            android:name=".activities.BookInfoActivity"
+            android:label="@string/activity_book_info_title" />
+        <activity
+            android:name=".uslessActivities.OrdersActivity"
+            android:label="@string/activity_orders_title" />
+        <activity
+            android:name=".uslessActivities.CartActivity"
+            android:label="@string/activity_cart_title" />
+        <activity
+            android:name=".uslessActivities.ProfileActivity"
+            android:label="@string/activity_profile_title"
+            android:parentActivityName=".uslessActivities.CatalogActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".uslessActivities.CatalogActivity" />
+        </activity>
+        <activity
+            android:name=".uslessActivities.CatalogActivity"
+            android:label="@string/activity_catalog_title">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <receiver android:name=".network.NetworkChangeReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+                <action android:name="android.net.ConnectivityManager.CONNECTIVITY_ACTION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">BOOK STORY</string>
+
+    <string name="activity_book_title">About book…</string>
+    <string name="price">$d ₽</string>
+    <string name="description_label">Description</string>
+    <string name="expand_text_btn">READ ALL</string>
+    <string name="publisher_label">Publisher</string>
+    <string name="genre_label">Genre</string>
+    <string name="year_of_publication_label">Year of publication</string>
+    <string name="all_book_info_btn">OVERALL BOOK INFO</string>
+    <string name="all_reviews_btn">ALL REVIEWS</string>
+    <string name="write_review_btn">WRITE REVIEW</string>
+    <string name="activity_book_info_title">Overall book info</string>
+    <string name="activity_cart_title">Cart</string>
+    <string name="activity_catalog_title">Catalog</string>
+    <string name="search_book_hint">Search book…</string>
+    <string name="activity_orders_title">Orders</string>
+    <string name="activity_profile_title">Profile</string>
+    <string name="change_password_btn">CHANGE PASSWORD</string>
+    <string name="activity_review_title">Reviews</string>
+    <string name="amount_of_book_label">Amount:</string>
+    <string name="add_to_cart_btn">ADD TO CART</string>
+    <string name="remove_from_cart">REMOVE FROM CART</string>
+    <string name="sum_of_order_label">Order`s cost:</string>
+    <string name="amount_of_purchase_label">Number of purchases:</string>
+    <string name="amount_of_items">%d PCs.</string>
+    <string name="average_rating_label">%f out of 10</string>
+    <string name="filter_btn_desc">%f out of 10</string>
+    <string name="profil_secondname_hint">Second name</string>
+    <string name="profil_firstname_hint">First name</string>
+    <string name="profil_middlename_hint">Middle name</string>
+    <string name="profil_email_hint">Email</string>
+    <string name="profil_phone_hint">Phone</string>
+    <string name="profil_age_hint">Age</string>
+    <string name="save_review_btn">SAVE REVIEW</string>
+</resources>

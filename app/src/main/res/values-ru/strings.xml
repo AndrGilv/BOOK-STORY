@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BOOK STORY</string>
+
+    <string name="activity_book_title">О книге…</string>
+    <string name="price">$d ₽</string>
+    <string name="description_label">Описание</string>
+    <string name="expand_text_btn">ЧИТАТЬ ПОЛНОСТЬЮ</string>
+    <string name="publisher_label">Издатель</string>
+    <string name="genre_label">Жанр</string>
+    <string name="year_of_publication_label">Год издания</string>
+    <string name="all_book_info_btn">ВСЯ ИНФОРМАЦИЯ О КНИГЕ</string>
+    <string name="all_reviews_btn">ВСЕ РЕЦЕНЗИИ О КНИГЕ</string>
+    <string name="write_review_btn">НАПИСАТЬ РЕЦЕНЗИЮ</string>
+    <string name="activity_book_info_title">Полная информация о книге</string>
+    <string name="activity_cart_title">Корзина</string>
+    <string name="activity_catalog_title">Каталог</string>
+    <string name="search_book_hint">Поиск книги…</string>
+    <string name="activity_orders_title">Заказы</string>
+    <string name="activity_profile_title">Профиль</string>
+    <string name="change_password_btn">СМЕНИТЬ ПАРОЛЬ</string>
+    <string name="activity_review_title">Рецензии</string>
+    <string name="amount_of_book_label">Количество:</string>
+    <string name="add_to_cart_btn">ДОБАВИТЬ В КОРЗИНУ</string>
+    <string name="remove_from_cart">УБРАТЬ ИЗ КОРЗИНЫ</string>
+    <string name="sum_of_order_label">Сумма заказа:</string>
+    <string name="amount_of_purchase_label">Количество покупок:</string>
+    <string name="amount_of_items">%d шт.</string>
+    <string name="average_rating_label">%f из 10</string>
+    <string name="filter_btn_desc">Отфильтровать книги</string>
+    <string name="profil_secondname_hint">Фамилия</string>
+    <string name="profil_firstname_hint">Имя</string>
+    <string name="profil_middlename_hint">Отчество</string>
+    <string name="profil_email_hint">Email</string>
+    <string name="profil_phone_hint">Телефон</string>
+    <string name="profil_age_hint">Возраст</string>
+    <string name="save_review_btn">СОХРАНИТЬ РЕЦЕНЗИЮ</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#007ea7</color>
+    <color name="colorPrimaryTransient">#90007EA7</color>
+    <color name="colorPrimaryDark">#003459</color>
+    <color name="colorPrimaryDarkTransient">#90003459</color>
+    <color name="colorPrimaryLight">#00B9FF</color>
+    <color name="colorPrimaryLightTransient">#9000B9FF</color>
+    <!--<color name="colorAccent">#00688F</color>
+    <color name="colorAccentTransient">#9000688F</color>-->
+    <color name="colorError">#B00020</color>
+    <color name="colorWorn">#EEEE00</color>
+    <color name="colorBlack">#DE000000</color>
+    <color name="colorWhite">#DBFFFFFF</color>
+    <color name="colorGray">#D3D3D3</color>
+    <color name="colorBlackMedium">#99000000</color>
+    <color name="colorWhiteMedium">#99FFFFFF</color>
+</resources>
