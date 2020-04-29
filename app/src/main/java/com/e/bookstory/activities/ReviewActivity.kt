@@ -27,11 +27,12 @@ class ReviewActivity : AppCompatActivity(), ReviewActivityView {
     private lateinit var avatarImageView: ImageView
     private lateinit var bottomNavigationView: BottomNavigationView
 
-    private val presenter: ReviewActivityPresenter = ReviewActivityPresenter(this)
+    private lateinit var presenter: ReviewActivityPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_review)
+        presenter = ReviewActivityPresenter(this)
         presenter.attachView(this)
 
         if(savedInstanceState != null){

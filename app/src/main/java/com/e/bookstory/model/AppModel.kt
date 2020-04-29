@@ -23,6 +23,7 @@ class AppModel(context: Context): AppModelInterface(), NetworkObserver {
     private var dbAvailable = false
 
     init{
+
         databaseHelper = DatabaseHelper(context)
 
         val testState = true
@@ -71,8 +72,10 @@ class AppModel(context: Context): AppModelInterface(), NetworkObserver {
         notifyPurchaseObservers()
     }
 
-    override fun updateNetworkState(newState: Int) {
-        if(newState == NetworkUtil.NETWORK_STATUS_MOBILE || newState == NetworkUtil.NETWORK_STATUS_WIFI){
+    override fun updateNetworkState(newState: Int)
+    {
+        if(newState == NetworkUtil.NETWORK_STATUS_MOBILE || newState == NetworkUtil.NETWORK_STATUS_WIFI)
+        {
             if (dbAvailable){
                 modelState = WITH_INTERNET_WITH_DB_MODEL_STATE
             }

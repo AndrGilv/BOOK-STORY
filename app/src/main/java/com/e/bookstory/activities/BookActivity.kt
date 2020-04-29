@@ -26,11 +26,12 @@ class BookActivity : AppCompatActivity(), BookActivityView {
     private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var descriptionText: TextView
 
-    private val presenter: BookActivityPresenter = BookActivityPresenter(this)
+    private lateinit var presenter: BookActivityPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book)
+        presenter = BookActivityPresenter(this)
         presenter.attachView(this)
         val toolBar: Toolbar = findViewById(R.id.bookTopAppBar)
         setSupportActionBar(toolBar)
@@ -88,11 +89,12 @@ class BookActivity : AppCompatActivity(), BookActivityView {
         }
         BottomNavBar.initialise(bottomNavigationView)
 
-        bookParams = if(savedInstanceState == null){
+        bookParams = intent.getStringArrayExtra("book") as Array<String>
+        /*bookParams = if(savedInstanceState == null){
             intent.getStringArrayExtra("book") as Array<String>
         } else{
             savedInstanceState.getStringArray(BOOK_PARAMS_KEY) as Array<String>
-        }
+        }*/
 
 
 
@@ -140,10 +142,10 @@ class BookActivity : AppCompatActivity(), BookActivityView {
 
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
+   /* override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putStringArray(BOOK_PARAMS_KEY,bookParams)
-    }
+    }*/
 
 
 

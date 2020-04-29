@@ -9,17 +9,18 @@ object CurrentUser {
 
     var firstName: String = ""
     var lastName: String = ""
-    var middleName: String= ""
+    var middleName: String = ""
     var age: Int = -1
     var email: String = ""
 
-    fun getProfileInfo(): ProfileInfo{
+    fun getProfileInfo(): ProfileInfo {
         return ProfileInfo(
             firstName,
             lastName,
             middleName,
             age,
             login,
-            email)
+            email
+        )
     }
 }

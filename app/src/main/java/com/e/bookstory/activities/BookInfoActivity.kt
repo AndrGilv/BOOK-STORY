@@ -81,11 +81,12 @@ class BookInfoActivity : AppCompatActivity() {
         }
         BottomNavBar.initialise(bottomNavigationView)
 
-        book = if(savedInstanceState != null){
+        book = Book.bildBookByParams(intent.getStringArrayExtra("book"))
+        /*book = if(savedInstanceState != null){
             Book.bildBookByParams(savedInstanceState.getStringArray(BOOK_KEY) as Array<String>)
         }else{
             Book.bildBookByParams(intent.getStringArrayExtra("book"))
-        }
+        }*/
 
         rv = findViewById(R.id.bookInfoRView)
         val llm = LinearLayoutManager(this)
@@ -102,8 +103,8 @@ class BookInfoActivity : AppCompatActivity() {
         bottomNavigationView.selectedItemId = -1;
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
+    /*override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putStringArray(BOOK_KEY,book.getParams())
-    }
+    }*/
 }
