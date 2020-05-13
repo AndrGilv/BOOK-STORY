@@ -2,6 +2,9 @@ package com.e.bookstory.activityAdapters
 
 import android.app.ActionBar
 import android.content.Context
+import android.graphics.drawable.Animatable2
+import android.graphics.drawable.AnimatedVectorDrawable
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.e.bookstory.R
 import com.e.bookstory.entities.Order
+
 
 class OrdersRVAdapter(ordersList: List<Order>, context: Context ): RecyclerView.Adapter<OrdersRVAdapter.OrderViewHolder>(){
     var ordersList: List<Order>
@@ -44,16 +48,35 @@ class OrdersRVAdapter(ordersList: List<Order>, context: Context ): RecyclerView.
             expandBtn = itemView.findViewById(R.id.expandBtn)
             expandLessBtn = itemView.findViewById(R.id.expandLessBtn)
 
+            val d: Drawable = expandBtn.getDrawable()
+            val expandBtnAnimation = d as AnimatedVectorDrawable
+
+            expandBtnAnimation.registerAnimationCallback(object : Animatable2.AnimationCallback() {
+                override fun onAnimationEnd(ignored: Drawable) {
+                    expandBtn.visibility = View.GONE
+                    expandLessBtn.visibility = View.VISIBLE
+                    expandBtnAnimation.reset()
+                }
+            })
+            expandBtnAnimation.reset()
             expandBtn.setOnClickListener {
                 listLayout.layoutParams.height = ActionBar.LayoutParams.WRAP_CONTENT
-                expandBtn.visibility = View.GONE
-                expandLessBtn.visibility = View.VISIBLE
-
+                expandBtnAnimation.start()
             }
+
+            val unexpandBtnAnimation = expandLessBtn.getDrawable() as AnimatedVectorDrawable
+
+            unexpandBtnAnimation.registerAnimationCallback(object : Animatable2.AnimationCallback() {
+                override fun onAnimationEnd(ignored: Drawable) {
+                    expandLessBtn.visibility = View.GONE
+                    expandBtn.visibility = View.VISIBLE
+                    unexpandBtnAnimation.reset()
+                }
+            })
+            unexpandBtnAnimation.reset()
             expandLessBtn.setOnClickListener {
                 listLayout.layoutParams.height = 0
-                expandLessBtn.visibility = View.GONE
-                expandBtn.visibility = View.VISIBLE
+                unexpandBtnAnimation.start()
             }
         }
     }

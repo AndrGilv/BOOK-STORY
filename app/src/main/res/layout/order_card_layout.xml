@@ -106,7 +106,7 @@
                     android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="@+id/bookAmountTView"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/ic_expand_more_black_24dp" />
+                    app:srcCompat="@drawable/avd_anim_expand" />
 
                 <ImageButton
                     android:id="@+id/expandLessBtn"
@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_expand_less_black_24dp"
+                    android:src="@drawable/avd_anim_unexpand"
                     android:tint="@color/colorWhite"
                     android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="@+id/bookAmountTView"

@@ -44,12 +44,12 @@ class ProfileFragment : Fragment(), ProfileFragmentView  {
         presenter.getProfileInfo()
 
         if(savedInstanceState != null){
-            firstNameInputText.text = savedInstanceState.getString(FIRSTNAME_KEY) as Editable
+            /*firstNameInputText.text = savedInstanceState.getString(FIRSTNAME_KEY) as Editable
             secondNameInputText.text = savedInstanceState.getString(SECONDNAME_KEY) as Editable
             middleNameInputText.text = savedInstanceState.getString(MIDDLENAME_KEY) as Editable
             emailInputText.text = savedInstanceState.getString(EMAIL_KEY) as Editable
             phoneInputText.text = savedInstanceState.getString(PHONE_KEY) as Editable
-            ageInputText.text = savedInstanceState.getString(AGE_KEY) as Editable
+            ageInputText.text = savedInstanceState.getString(AGE_KEY) as Editable*/
         }
 
         changepasswordBtn.setOnClickListener {
@@ -74,12 +74,12 @@ class ProfileFragment : Fragment(), ProfileFragmentView  {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString(FIRSTNAME_KEY, firstNameInputText.text.toString())
+        /*outState.putString(FIRSTNAME_KEY, firstNameInputText.text.toString())
         outState.putString(SECONDNAME_KEY, secondNameInputText.text.toString())
         outState.putString(MIDDLENAME_KEY, middleNameInputText.text.toString())
         outState.putString(EMAIL_KEY, emailInputText.text.toString())
         outState.putString(PHONE_KEY, phoneInputText.text.toString())
         outState.putString(AGE_KEY, ageInputText.text.toString())
-
+*/
     }
 }
